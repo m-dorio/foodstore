@@ -1,18 +1,103 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth !important;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  text-decoration: none ;
+  border: none ;
+  outline: none;
+  scroll-behavior: smooth;
 }
 
 body {
-    background:
-  /* linear-gradient(127deg, rgba(255, 196, 0,0.3), rgba(0, 0, 0, 0) 80.71%),
-  linear-gradient(217deg, rgba(3, 0, 163, 0.3), rgba(0, 0, 0, 0) 80.71%),
-  linear-gradient(336deg, rgba(0, 113, 233, 0.5), rgba(0, 0, 0, 0) 80.71%),
-   */
-  url(../images/about-image.jpg);
-  background-attachment: fixed !important;
-  background-size: cover;
-  background-position: center center;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  background: url(../images/about-image-bg.png);
+}
+
+header{
+  min-height:95vh;
+}
+
+#banner{
+ 
+  background-attachment: scroll !important;
+  background-size: auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+  /* border: 3px solid #cb8e15; */
+}
+
+footer{
+  background-color: cornsilk;
+}
+
+.custom-text-color{
+  color: rgb(181, 103, 15);
+}
+
+.custom-border-color{
+  border: 1px solid #cb8e15;
+}
+
+.mynavbar a {
+  background-color:#cb8e15;
+  border-radius: 0.2rem;
+  color: #FFF;
+  border: 6px solid rgb(181, 103, 15);
+  text-transform: uppercase;
+
+}
+
+.mynavbar a:hover, 
+.mynavbar a.active{
+  color: #FFF;
+  box-shadow: none; 
+  border: 6px solid rgb(123, 71, 10) !important;
+  background-color:rgb(181, 103, 15) !important;
+}
+
+
+.carousel-control-prev, .carousel-control-next{
+  background-color:rgba(0, 0, 0, 0.05);
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover{
+background-color:rgba(0, 0, 0, 0.2);
+}
+
+.carousel-inner{
+  width:auto !important;
+  height: auto !important;
+}
+
+.carousel-inner img{
+  height: 540px;
+  overflow: hidden;
+}
+
+.icons{
+  margin: 3px !important;
+  padding: 5px 5px;
+  color: #cb8e15;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid #cb8e15;
+  background-color: transparent;
+  border-radius: 14px;
+  z-index: 1;
+
+}
+
+
+.icons:hover{
+  margin: 3px !important;
+  padding: 5px 5px;
+  color: #cb8e15;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid #ffffff;
+  background-color: #FFFFFF;
+  border-radius: 14px;
+  z-index: 1;
+  cursor: pointer;
 }
