@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth !important;
+}
+
+body {
+    background:
+  /* linear-gradient(127deg, rgba(255, 196, 0,0.3), rgba(0, 0, 0, 0) 80.71%),
+  linear-gradient(217deg, rgba(3, 0, 163, 0.3), rgba(0, 0, 0, 0) 80.71%),
+  linear-gradient(336deg, rgba(0, 113, 233, 0.5), rgba(0, 0, 0, 0) 80.71%),
+   */
+  url(../images/about-image.jpg);
+  background-attachment: fixed !important;
+  background-size: cover;
+  background-position: center center;
+}
