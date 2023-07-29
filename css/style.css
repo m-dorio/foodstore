@@ -65,6 +65,10 @@ a{color: var(--text-color); text-decoration: none;}
 
 #blank-page{min-height:50vh;max-width: 100vmax;}
 
+.c-pointer{
+    cursor: pointer;
+}
+
 .logo {
     color: var(--cl3-color);
     font-weight: 600;

@@ -44,13 +44,12 @@ let generateShop = () => {
                                     </span>
                                 </div>
                             </div>
-
                             <div class="product-content">       
                                 <div class="details">
                                     <p><h4>${productName}</h4></p>
                                     <p>${description}</p>
                                 </div>
-                            </div>                      
+                            </div>
                     </div>`;
             }
 
@@ -60,6 +59,11 @@ let generateShop = () => {
         
 generateShop();
 
+
+
+let checkOut = () => {
+    location.replace("./cart.html")
+}
 
 let calculation =()=> {
         cartAmount.innerHTML = cart.map((allItems) => allItems.item).reduce( (x , y) => x + y, 0 );

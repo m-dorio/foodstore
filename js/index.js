@@ -6,7 +6,6 @@
 const elemToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
 
-
 /**
  * dark & light theme toggle
  */

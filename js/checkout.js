@@ -30,25 +30,9 @@ let generateCartItems = () => {
                     </div>
  
                     <div id="price">          
-                        <span id="stats">${stats}</span> <span id="old-price">${oldPrice}</span>/<span>&#8369;${item * price}</span>
-                        <div class="cart-button">
-                            <span>
-                            <i onclick="removeFromCart(${id})" class="bi bi-dash-square"></i>   
-                            </span>                     
-                                <p id=${id} class="cart-item-price">${item}</p>
-                            <span>
-                                <i onclick="addToCart(${id})" class="bi bi-plus-square"></i>
-                            </span>
-                           
-                        </div>
+                        <span id="stats">${stats}</span> <span id="old-price">${oldPrice}</span>/<span>&#8369;${item * price}</span> x<span id=${id} class="cart-item-price">${item}</span>
                     </div>
-
                 </div>
-
-                <div class="removeItemButton">
-                    <i onclick="removeItem(${id})" class="bi bi-x-circle-fill"></i>
-                </div>
-
             </div>
       `              
         }).join('\n');
@@ -128,20 +112,16 @@ let removeItem = (id) => {
 
 };
 
-let addMore = () => {
-    location.replace("./index.html")
-}
 
-let confirmOrder = () => {
-    location.replace("./checkout.html")
-}
-
-let clearCart = () => {
+let orderCompleted = () => {
     cart = [];
     generateCartItems();
     calculation();
     localStorage.setItem('cartData', JSON.stringify(cart));
+    location.replace("./index.html")
 }
+
+
 
 let totalAmount = (x) => {
 
@@ -152,10 +132,13 @@ let totalAmount = (x) => {
             return item * search.price;
         }).reduce((x,y)=> x + y, 0); // total amount
         label.innerHTML = `
-        <h2 class="darker-text"> Total amount: &#8369;${amount}</h2>
-        <button class="btn btn-primary p-3 mx-2" onclick="addMore()">Add more</button>
-        <button class="btn btn-warning p-3 mx-2" onclick="confirmOrder()">Confirm</button>
-        <button class="btn btn-danger p-3 mx-2" onclick="clearCart()">Clear</button>
+      
+        <div>
+        <p class="display-2 my-5">Order complete!</p>
+        <h2 class="darker-text py-1"> Total amount: &#8369;${amount}</h2>
+        <p class="c-pointer h4 py-3"><a onclick="orderCompleted()">Click here to home <i class="bi bi-house-fill"></i></a></p>
+        </div>
+        <button class="btn btn-warning p-3 mx-2" onclick="orderCompleted()">Order Again</button>
         `;
 
     } else return;
