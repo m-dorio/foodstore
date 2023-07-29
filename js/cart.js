@@ -22,84 +22,35 @@ let generateCartItems = () => {
 
             <div class="cart-item">
             
-                <div class="product-content">       
-                    <div class="details">
-                        <p><h4>${productName}</h4></p>
-                    </div>   
-                    
-                    <div class="imgItemContainer"> 
-                    <img class="imgItemSmall" src="${productImg}" alt="" />
-                    </div>
-                
-                    <div>
-                        <p>${description}</p>
-                    </div>  
-                    
-                </div>
+                <div class="cart-product-content">   
 
-                <div class="small-price-quantity">
-                    <div id="price">
-                        <span id="stats">${stats}</span>
-                        <span id="old-price">${oldPrice}</span>/<span>&#8369;${item * price}</span>
+                    <div class="cart-imgItemContainer"> 
+                        <img class="imgItemSmall" src="${productImg}" alt="" />
+                        <p class="px-2">${productName} | ${description}</p>
                     </div>
-
-                    <div class="cart-button">
-                        <span>
-                        <i onclick="removeFromCart(${id})" class="bi bi-dash-square"></i>   
-                        </span>                     
-                            <p id=${id} class="cart-item-price">${item}</p>
-                        <span>
-                            <i onclick="addToCart(${id})" class="bi bi-plus-square"></i>
-                        </span>
+ 
+                    <div id="price">          
+                        <span id="stats">${stats}</span> <span id="old-price">${oldPrice}</span>/<span>&#8369;${item * price}</span>
+                        <div class="cart-button">
+                            <span>
+                            <i onclick="removeFromCart(${id})" class="bi bi-dash-square"></i>   
+                            </span>                     
+                                <p id=${id} class="cart-item-price">${item}</p>
+                            <span>
+                                <i onclick="addToCart(${id})" class="bi bi-plus-square"></i>
+                            </span>
+                           
+                        </div>
                     </div>
 
-                                
                 </div>
 
                 <div class="removeItemButton">
-                    <i onclick="removeItem(${id})" class="bi bi-x-circle"></i>
+                    <i onclick="removeItem(${id})" class="bi bi-x-circle-fill"></i>
                 </div>
 
             </div>
       `              
-            
-            // <div class="cart-card">
-
-            //     <div class="cart-item">
-
-            //         <h5 class="title-price">
-            //             <p>${productName}</p>
-            //             <p>${stats}</p>
-            //         </h5>
-            //         <img class="imgItemSmall" src="${productImg}" alt="" />
-
-            //         <div class="mini-price-x">
-            //             <div class="cart-button">
-            //                 <span>
-            //                     <i onclick="removeFromCart(${id})" class="bi bi-dash-square"></i>   
-            //                 </span>                     
-            //                     <p id=${id} class="cart-item-price">${item}</p>
-            //                 <span>
-            //                     <i onclick="addToCart(${id})" class="bi bi-plus-square"></i>
-            //                 </span>
-            //             </div>
-            //                 <h3>$${item * price}</h3>
-            //         </div>
-
-
-            //         <div class="details-mini">
-            //             <div class="title-price-x">
-            //                 <p class="cart-item-price">$${price} per item</p>
-            //             </div>
-            //         </div>
-
-            //     </div>
-
-            //     <div class="removeItemButton">
-            //         <i onclick="removeItem(${id})" class="bi bi-x-circle"></i>
-            //      </div>
-            //  </div>
-            
         }).join('\n');
 
     }
@@ -194,8 +145,8 @@ let totalAmount = (x) => {
         }).reduce((x,y)=> x + y, 0); // total amount
         label.innerHTML = `
         <h2 class="darker-text"> Total amount: &#8369;${amount}</h2>
-        <button class="checkout">Checkout</button>
-        <button onclick="clearCart()" class="removeAll">Clear All</button>
+        <button class="btn btn-success p-3 mx-2">Checkout</button>
+        <button class="btn btn-danger p-3 mx-2" onclick="clearCart()">Clear All</button>
         `;
 
     } else return;
