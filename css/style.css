@@ -15,8 +15,8 @@
     --text-color: #000000; */
     --p-color:#d62828;
     --s-color:#f77f00;
-
-    --darkb-color:#003049;
+    --mode-color:#ffc400;
+    
 }
 
 body{
@@ -26,9 +26,10 @@ body{
 a{color: var(--text-color); text-decoration: none;}
 
 .light_theme {
-    --text-color:#141414;
+    --text-color:#262626;
     --textR-color:#ffffff;
     --textS-color:#ffffff;
+    --bgm-color: #1e1e1e;
     --main-color:#ede6d9;
     --sec-color:#ede6d9;
     --mainR-color:#272727;
@@ -36,6 +37,8 @@ a{color: var(--text-color); text-decoration: none;}
     --cl1-color:#ead7b7;
     --cl2-color:#fff8ec;
     --cl3-color:#ffc400;
+    --mode-color:#ffa600;
+    --glow:rgb(255, 128, 0);
     --t-color:#392000;
     --gradient-bg:
     linear-gradient(127deg, var(--main-color), rgba(0, 0, 0, 0) 40.71%),
@@ -46,8 +49,9 @@ a{color: var(--text-color); text-decoration: none;}
 
 .dark_theme {
     --text-color:#ffffff;
-    --textR-color:#000000;
+    --textR-color:#1e1e1e;
     --textS-color:#ffffff;
+    --bgm-color: #1e1e1e;
     --main-color:#272727;
     --sec-color:#181818;
     --mainR-color:#ede6d9;
@@ -55,6 +59,8 @@ a{color: var(--text-color); text-decoration: none;}
     --cl1-color:#444444;
     --cl2-color:#313131;
     --cl3-color:#959595;
+    --mode-color:#ffffff;
+    --glow:rgb(255, 115, 0);
     --t-color:#fcbf49;
     --gradient-bg:
     linear-gradient(127deg, var(--main-color), rgba(0, 0, 0, 0) 40.71%),
@@ -69,20 +75,30 @@ a{color: var(--text-color); text-decoration: none;}
     cursor: pointer;
 }
 
-#logo {
-    color: var(--cl3-color);
+.bg-color{
+    background: var(--bgm-color);
+}
+
+::placeholder {
+    color: #fff;
+    opacity: 0.7; 
+  }
+  
+#logo, #logo .fa-bowl-rice {
+    color: var(--mode-color);
+    text-shadow: 0 0 10px var(--glow);
     font-weight: 600;
     cursor: pointer;
-    font-size:  3.5vh;
+    font-size:  3.2vh;
 }
 
 #landing{
     background: var(--gradient-bg), url('../images/landing-ramen.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     color: var(--text-color);
-    min-height: 50vh;
+    min-height: 40vh;
     max-width: 100vmax;
 }
 
@@ -109,7 +125,7 @@ a{color: var(--text-color); text-decoration: none;}
     max-width: 100vmax;
 }
 
-.HomeBtn{
+/* .HomeBtn{
     background-color: var(--second-bg-color);
     flex-direction: row;
     justify-content: space-between;
@@ -118,7 +134,7 @@ a{color: var(--text-color); text-decoration: none;}
     border-radius: 10px;
     font-size:  20px;
     cursor: pointer;
-}
+} */
 
 .header.active .theme-btn { background: var(--main-color); }
 
@@ -156,14 +172,38 @@ a{color: var(--text-color); text-decoration: none;}
     font-size: 1.2rem;
     font-weight: 600;
 }
+/* .ui-id-1{
+
+} */
+
+.ui-widget-content {
+    border: 1px solid #dddddd;
+    background: #fff;
+    display: inline-block;
+    z-index: 3 !important;
+    position: fixed !important;
+}
+
+.ui-menu{
+    z-index: 4 !important;
+    padding-top: 2vh;
+}
+.ui-menu-item{
+    text-decoration: none;
+    list-style: none;
+    z-index: 4 !important;
+    padding: 1vh 0vh;
+}
 
 #cart{
     position:relative;
-    background-color: var(--main-color);
-    color: var(--text-color);
-    padding: 2px;
+    color: var(--mode-color);
+    border-color: var(--mode-color);
+    padding: 2px 6px;
     font-size: 20px;
-    border-radius: 4px;
+    border-radius:4px;
+    border: 1px solid;
+    border-color: var(--mode-color);
 }
 
 .cartAmount {
@@ -219,7 +259,7 @@ a{color: var(--text-color); text-decoration: none;}
 .icon-glow{
     margin: 3px !important;
     padding: 5px 5px;
-    color: var(--s-color);
+    color: var(--modeR-color);
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 14px;
@@ -232,7 +272,7 @@ a{color: var(--text-color); text-decoration: none;}
     cursor: pointer;
     margin: 3px !important;
     padding: 5px 5px;
-    color: var(--main-color);
+    color: var(--glow);
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 14px;
@@ -375,6 +415,7 @@ a{color: var(--text-color); text-decoration: none;}
     position: fixed;
     bottom: 30px;
     right: 15px;
+    font-size: 4vh;
 }
 
 #movingButtonDown{
@@ -382,6 +423,7 @@ a{color: var(--text-color); text-decoration: none;}
     position: fixed;
     bottom: 30px;
     right: 15px;
+    font-size: 4vh;
 }
 
 .movingButtonUp, .movingButtonDown{
