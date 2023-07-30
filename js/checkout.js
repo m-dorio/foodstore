@@ -131,17 +131,24 @@ const ranD = new Date();
             let search = shopItemsData.find((y)=> y.id === id) || [];
             return item * search.price;
         }).reduce((x,y)=> x + y, 0); // total amount
-        label.innerHTML = `
-      
-        <div>
-        <p class="display-2 mt-5">Order Received!</p>
-        <p><span class="h4 my-5">Order Reference ID: ${ranD.getMonth()}-${ranD.getFullYear()}-${ranD.getMilliseconds()}-${raNd}-${ranD.getDate()}</span> </p>
-        <p><span class="h5"> Date Ordered: ${ranD.getMonth()}-${ranD.getDate()}-${ranD.getFullYear()}</span> </p>
+        label.innerHTML = `   
        
-        <h2 class="h4 darker-text py-1"> Total amount: &#8369;${amount}</h2>
-        <p class="c-pointer h4 py-3"><a onclick="orderCompleted()">Click here to home <i class="fa-solid fa-house"></i></a></p>
+        <div class="d-flex justify-content-center align-content-center">
+            <div>
+                <p><span class="textuppercase h5 my-5">Order Reference ID:</span> ${ranD.getHours()}${raNd}-${ranD.getFullYear()}-${ranD.getMilliseconds()}-${raNd}-${ranD.getDate()}</p>
+                <p><span class="textuppercase h5">Date Ordered:</span> ${ranD.toDateString()}, ${ranD.toLocaleTimeString()}</p>
+                <h2 class="textuppercase h5 darker-text py-1"> Total amount: &#8369;${amount}.00</h2>
+                
+            </div>
         </div>
-        <button class="btn btn-warning p-3 mx-2" onclick="orderCompleted()">Order Again</button>
+        
+        <div class="text-center">
+            <p class="display-2 mt-2">Order Received!</p>
+            <button class="btn btn-warning p-3 mx-2" onclick="orderCompleted()">Order Again</button>
+            <p class="c-pointer h4 pt-5"><a onclick="orderCompleted()">Click here to home <i class="fa-solid fa-house"></i></a></p>
+        <div>
+
+        
         `;
             //Month Year milSec random getdate
     } else return;

@@ -78,6 +78,9 @@ a{color: var(--text-color); text-decoration: none;}
 .bg-color{
     background: var(--bgm-color);
 }
+.bg-color-modal{
+    background: var(--mainR-color) !important;
+}
 
 ::placeholder {
     color: #fff;
@@ -93,7 +96,9 @@ a{color: var(--text-color); text-decoration: none;}
     text-transform: uppercase;
 }
 
-#banner{
+.textuppercase{ text-transform: uppercase;}
+
+#banner, .banner{
     text-transform: uppercase;
     color: var(--bgm-color);
     text-shadow: 0 0 10px var(--glow);

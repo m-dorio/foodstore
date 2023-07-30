@@ -12,39 +12,50 @@
         <title>Contact - Thank you!</title>
 </head>
     <body class="bg-dark">
-                 <!-- HOME SECTION START -->
-                 <section id="landing" class="min-vh-100">
-                   
-                </section>
-                <!-- HOME SECTION START -->
+    <!-- HOME SECTION START -->
+    <section id="landing" class="min-vh-100"></section>
+    <!-- HOME SECTION START -->
 
-                 <!-- Modal Start -->
-     
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+    <!-- Modal Start -->
+    <div class="modal fade" id="onload" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> <!-- Add this line to your code -->
+        <div class="modal-dialog modal-xl modal-dialog-centered ">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="myModalLabel">Thank you for contacting me!</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
+                    <h5 class="modal-title bg-color-modal" id="exampleModalLabel">Thank you for contacting me! <i class="bowl-rice fa-solid fa-bowl-rice"></i></h5>
                 </div>
-                <div class="modal-body">
-                    <p>Message Successfully Sent!</p>
+                <div class="modal-body bg-secondary">
+                    <p class="text-center">
+                        <a href="./index.html"><span class="textfx">Hot</span><span id="logo">/Strings&nbsp;<i class="bowl-rice fa-solid fa-bowl-rice"></i></span></a>
+                    </p>
+                    <p class="text-center">
+                        <span class="textfx">Message Successfully Sent!</span>
+                    </p>
                 </div>
-                <div class="modal-footer">
-                    <button myButton type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                <div class="modal-footer bg-color-modal">
+                    <button id="myButton" type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
+    <!-- And the relavant closing div tag -->
 
     <section id="footer"></section>
-
-    <script type="text/javascript" src="./js/contact.js"></script>
     <!-- Modal End --> 
+
+    <!-- import jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-                        <!-- ADDITIONAL ICONS NOT INCLUDED IN BOOTSRAP -->
+    
+    <!--Modal JS Script -->
+    <script type="text/javascript">
+        window.onload = () => {
+            $('#onload').modal('show');
+            document.getElementById("myButton").onclick = () =>{
+            location.href = "https://m-dorio.github.io/foodstore/"; }
+        }
+    </script>
+    
     <script src="https://kit.fontawesome.com/6845f956f4.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./js/trade.js"></script>
     <script type="text/javascript" src="./js/index.js"></script>
