@@ -69,11 +69,11 @@ a{color: var(--text-color); text-decoration: none;}
     cursor: pointer;
 }
 
-.logo {
+#logo {
     color: var(--cl3-color);
     font-weight: 600;
     cursor: pointer;
-    font-size:  2.5rem;
+    font-size:  3.5vh;
 }
 
 #landing{
@@ -348,5 +348,300 @@ a{color: var(--text-color); text-decoration: none;}
     border-radius: 10%; 
 }
 
+#movingButtonUp{
+    display:inline-block;
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+}
 
+#movingButtonDown{
+    display:inline-block;
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+}
+
+.movingButtonUp, .movingButtonDown{
+    width: 65px;
+    height: 65px;
+    padding: 0px;
+    background-color:var(--s-color);
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+    border-radius: 20%;
+}
+
+.movingButtonUp:hover, .movingButtonDown:hover{
+    -webkit-transition: 0.5s ease-out;
+    -moz-transition: 0.5s ease-out;
+    -o-transition: 0.5s ease-out;
+    transition: 0.5s ease-out;
+    background-color:var(--p-color);
+}
+
+@media(max-width: 3840px){
+    .shop{
+        display: grid;
+        grid-template-columns: repeat(6, 480px);
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .imgItem{
+        
+        padding: 4px;
+        width: 30rem;
+        height: 18rem;
+        border-radius: 10px 30px 10px 30px;
+    }
+
+    .shopping-cart{
+        display: grid;
+        grid-template-columns: repeat(3, 650px);
+        gap: 15px;
+        justify-content: center; 
+    }
+}
+
+
+@media(max-width: 3560px){
+    .shop{
+        display: grid;
+        grid-template-columns: repeat(4, 480px);
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .imgItem{
+        
+        padding: 4px;
+        width: 30rem;
+        height: 18rem;
+        border-radius: 10px 30px 10px 30px;
+    }
+    
+}
+
+@media(max-width: 2560px){
+    .shop{
+        display: grid;
+        grid-template-columns: repeat(4, 400px);
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .imgItem{
+        
+        padding: 4px;
+        width: 25rem;
+        height: 15rem;
+        border-radius: 10px 30px 10px 30px;
+    }
+
+    .shopping-cart{
+        display: grid;
+        grid-template-columns: repeat(2, 650px);
+        gap: 15px;
+        justify-content: center; 
+    }
+    
+}
+
+@media(max-width: 1920px){
+    .shop{
+        display: grid;
+        grid-template-columns: repeat(4, 320px);
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .imgItem{
+        
+        padding: 4px;
+        width: 20rem;
+        height: 12rem;
+        border-radius: 10px 30px 10px 30px;
+    }
+    
+}
+
+@media(max-width: 1400px){
+    .shop{
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .imgItem{
+        
+        padding: 4px;
+        width: 22rem;
+        height: 12rem;
+        border-radius: 10px 30px 10px 30px;
+    }
+
+    .shopping-cart{
+        display: grid;
+        grid-template-columns: repeat(2, 600px);
+        gap: 15px;
+        justify-content: center; 
+    }
+}
+
+@media(max-width: 1280px){
+    .shop{
+        display: grid;
+        grid-template-columns: repeat(3, 320px);
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .imgItem{
+        
+        padding: 4px;
+        width: 20rem;
+        height: 14rem;
+        border-radius: 10px 30px 10px 30px;
+    }
+
+    .shopping-cart{
+        display: grid;
+        grid-template-columns: repeat(1, 650px);
+        gap: 15px;
+        justify-content: center; 
+    }
+}
+
+@media(max-width: 1100px){
+    .shop{
+        display: grid;
+        grid-template-columns: repeat(3, 290px);
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .imgItem{
+        
+        padding: 4px;
+        width: 18rem;
+        height: 12rem;
+        border-radius: 10px 30px 10px 30px;
+    }
+    
+    .shopping-cart{
+        display: grid;
+        grid-template-columns: repeat(1, 600px);
+        gap: 15px;
+        justify-content: center; 
+    }
+}
+
+@media(max-width: 900px){
+    .shop{
+        display: grid;
+        grid-template-columns: repeat(2, 350px);
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .imgItem{
+        
+        padding: 4px;
+        width: 22rem;
+        height: 12rem;
+        border-radius: 10px 30px 10px 30px;
+    }
+    
+}
+
+@media(max-width: 768px){
+    .shop{
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .imgItem{
+        padding: 4px;
+        width: 19rem;
+        height: 12rem;
+        border-radius: 10px 30px 10px 30px;
+    }
+
+    .shopping-cart{
+        display: grid;
+        grid-template-columns: repeat(1, 650px);
+        gap: 15px;
+        justify-content: center; 
+    }
+
+    .shopping-cart{
+        display: grid;
+        grid-template-columns: repeat(1, 450px);
+        gap: 15px;
+        justify-content: center; 
+    }
+}
+
+@media(max-width: 700px){
+    .shop{
+        display: grid;
+        grid-template-columns: repeat(1, 420px);
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .imgItem{
+        padding: 4px;
+        width: 25rem;
+        height: 18rem;
+        border-radius: 10px 30px 10px 30px;
+    }
+    
+}
+
+
+@media(max-width: 480px){
+    .shop{
+        display: grid;
+        grid-template-columns: repeat(1, 350px);
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .imgItem{
+        
+        padding: 4px;
+        width: 22rem;
+        height: 15rem;
+        border-radius: 10px 30px 10px 30px;
+    }
+ 
+    .shopping-cart{
+        display: grid;
+        grid-template-columns: repeat(1, 300px);
+        gap: 15px;
+        justify-content: center; 
+    }
+}
+
+@media(max-width: 320px){
+    .shop{
+        display: grid;
+        grid-template-columns: repeat(1, 300px);
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .imgItem{
+        
+        padding: 4px;
+        width: 19rem;
+        height: 12rem;
+        border-radius: 10px 30px 10px 30px;
+    }
+
+}
 

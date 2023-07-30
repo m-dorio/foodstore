@@ -43,3 +43,26 @@ if (localStorage.getItem("theme") === "light_theme") {
   document.body.classList.remove("light_theme");
   document.body.classList.add("dark_theme");
 }
+
+window.addEventListener("scroll", function() {
+  let buttonUp = document.getElementById("movingButtonUp");
+  let buttonDown = document.getElementById("movingButtonDown");
+  
+  if (window.pageYOffset > 360) { // Adjust the value (300 in this case) to control when the button appears.
+    // buttony.style.display = "block";
+    buttonUp.classList.add('d-block');
+    buttonUp.classList.remove('d-none');
+    buttonDown.classList.add('d-none');
+    buttonDown.classList.remove('d-block');
+  } 
+
+  else {
+    buttonUp.classList.add('d-none');
+    buttonUp.classList.remove('d-block');
+    buttonDown.classList.add('d-block');
+    buttonDown.classList.remove('d-none');
+    // buttony.style.display = "none";
+  }
+
+
+});

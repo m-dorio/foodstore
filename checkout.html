@@ -14,7 +14,7 @@
 
 <body translate="no" class="dark_theme">
 
-    <header>
+    <header id="home">
         <nav class="navbar navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
                 <button class="navbar-toggler active" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
@@ -73,6 +73,23 @@
         </nav>
     </header>
 
+    <section>
+        <a href="#home">
+            <div id="movingButtonUp" class="movingButtonUp d-none c-pointer">
+                <div class="mx-2 align-self-center movingButton">
+                    <p class="display-5 xlfont-smid text-uppercase text-center">&#8593;</p>
+                </div> 
+            </div>
+        </a>
+
+        <a href="#footer">
+            <div id="movingButtonDown" class="movingButtonDown d-block c-pointer">
+                <div class="mx-2 align-self-center movingButton">
+                    <p class="display-5 xlfont-smid text-uppercase text-center">&#8595;</p>
+                </div> 
+            </div>
+        </a>
+    </section>
 
     <section id="checkout-section">
         <div id="shopping-cart" class="shopping-cart py-5"></div>
@@ -81,7 +98,7 @@
     </section>  
 
         <!-- FOOTER SECTION START -->
-        <footer class="d-flex align-items-center justify-content-center bg-dark">
+        <footer id="footer" class="d-flex align-items-center justify-content-center bg-dark">
             <div class="mx-2 p-3 text-white">
                 
                 Copyright &copy; 2023 by mdorio. | All rights Reserved.
