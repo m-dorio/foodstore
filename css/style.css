@@ -216,11 +216,31 @@ a{color: var(--text-color); text-decoration: none;}
     margin: 5px;
 }
 
-/* ::placeholder {
-    color: var(--p-color);
-} */
+.icon-glow{
+    margin: 3px !important;
+    padding: 5px 5px;
+    color: var(--s-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 14px;
+    border: 1px solid #ffffff;
+    border-radius: 14px;
+    z-index: 1;
+}
 
-
+.icon-glow:hover{
+    cursor: pointer;
+    margin: 3px !important;
+    padding: 5px 5px;
+    color: var(--main-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 14px;
+    border: 1px solid #ffffff;
+    border-radius: 14px;
+    z-index: 1;
+}
+  
 .price-quantity {
     display: flex;
     flex-direction: row;
