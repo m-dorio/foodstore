@@ -111,7 +111,7 @@ let shopItemsData = [
     },
     {
         id: "ABC05",
-        productName: "Pancit Miki or Pancit Lomi (Manila)",
+        productName: "Pancit Miki/Pancit Lomi (Manila)",
         oldPrice: 221.00,
         price: 121.00,
         stats: "On Sale!",
