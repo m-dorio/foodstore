@@ -201,6 +201,8 @@ a{color: var(--text-color); text-decoration: none;}
 }
 
 .product-content h4{
+    text-align: center;
+    font-size: 2.5vh;
     color: var(--t-color);
     font-weight:600;
 }
@@ -237,9 +239,9 @@ a{color: var(--text-color); text-decoration: none;}
     cursor: pointer;
 }
 
-#price{font-size: 1.5rem; color:var(--maiR-color);}
-#old-price{text-decoration: line-through; color: var(--p-color);}
-#stats{font-size: 1.5rem; font-weight: 600; color:var(--s-color);}
+#price{font-size: 2.2vh; color:var(--maiR-color);}
+#old-price{font-size: 2.2vh; text-decoration: line-through; color: var(--p-color);}
+#stats{font-size: 2vh; font-weight: 600; color:var(--s-color);}
 
 .bi-house-fill{
     font-size: 2.5rem;
