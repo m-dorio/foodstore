@@ -30,14 +30,14 @@ let generateCartItems = () => {
                     </div>
  
                     <div id="price">          
-                        <span id="stats">${stats}</span> <span id="old-price">${oldPrice}</span>/<span>&#8369;${item * price}</span>
+                        <span id="old-price">${oldPrice}.00</span>/<span>&#8369;${item * price}.00</span> <span id="stats">${stats}</span>
                         <div class="cart-button">
                             <span>
-                            <i onclick="removeFromCart(${id})" class="bi bi-dash-square"></i>   
+                            <i onclick="removeFromCart(${id})" class="fa-regular fa-square-minus"></i>  
                             </span>                     
                                 <p id=${id} class="cart-item-price">${item}</p>
                             <span>
-                                <i onclick="addToCart(${id})" class="bi bi-plus-square"></i>
+                                <i onclick="addToCart(${id})" class="fa-solid fa-square-plus"></i>
                             </span>
                            
                         </div>
@@ -46,7 +46,7 @@ let generateCartItems = () => {
                 </div>
 
                 <div class="removeItemButton">
-                    <i onclick="removeItem(${id})" class="bi bi-x-circle-fill"></i>
+                    <i onclick="removeItem(${id})" class="fa-solid fa-circle-xmark"></i>
                 </div>
 
             </div>
@@ -59,7 +59,7 @@ let generateCartItems = () => {
         label.innerHTML =`
         <div>
         <p class="display-2 my-5">Cart is currently empty.</p>
-        <p class="display-6"><a href="./index.html">Click here <i class="bi bi-house-fill"></i> to order.</a></p>
+        <p class="display-6"><a href="./index.html">Click here <i class="fa-solid fa-clipboard-list"></i> to order.</a></p>
         </div>
         `;
     }
@@ -154,7 +154,7 @@ let totalAmount = (x) => {
         label.innerHTML = `
         <h2 class="darker-text"> Total amount: &#8369;${amount}</h2>
         <button class="btn btn-primary p-3 mx-2" onclick="addMore()">Add more</button>
-        <button class="btn btn-warning p-3 mx-2" onclick="confirmOrder()">Confirm</button>
+        <button class="btn btn-warning p-3 mx-2" onclick="confirmOrder()">Done</button>
         <button class="btn btn-danger p-3 mx-2" onclick="clearCart()">Clear</button>
         `;
 

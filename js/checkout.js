@@ -43,7 +43,7 @@ let generateCartItems = () => {
         label.innerHTML =`
         <div>
         <p class="display-2 my-5">Cart is currently empty.</p>
-        <p class="display-6"><a href="./index.html">Click here <i class="bi bi-house-fill"></i> to order.</a></p>
+        <p class="display-6"><a href="./index.html">Click here <i class="fa-solid fa-house"></i> to order.</a></p>
         </div>
         `;
     }
@@ -115,15 +115,15 @@ let removeItem = (id) => {
 
 let orderCompleted = () => {
     cart = [];
-    generateCartItems();
-    calculation();
+   // generateCartItems();
+    //calculation();
     localStorage.setItem('cartData', JSON.stringify(cart));
     location.replace("./index.html")
 }
 
-
-
 let totalAmount = (x) => {
+let raNd = Math.floor((Math.random() * 100) + 1);
+const ranD = new Date();
 
     if (cart.length !==0) {
         let amount = cart.map((x) => {
@@ -134,13 +134,16 @@ let totalAmount = (x) => {
         label.innerHTML = `
       
         <div>
-        <p class="display-2 my-5">Order complete!</p>
-        <h2 class="darker-text py-1"> Total amount: &#8369;${amount}</h2>
-        <p class="c-pointer h4 py-3"><a onclick="orderCompleted()">Click here to home <i class="bi bi-house-fill"></i></a></p>
+        <p class="display-2 mt-5">Order Received!</p>
+        <p><span class="h4 my-5">Order Reference ID: ${ranD.getMonth()}-${ranD.getFullYear()}-${ranD.getMilliseconds()}-${raNd}-${ranD.getDate()}</span> </p>
+        <p><span class="h5"> Date Ordered: ${ranD.getMonth()}-${ranD.getDate()}-${ranD.getFullYear()}</span> </p>
+       
+        <h2 class="h4 darker-text py-1"> Total amount: &#8369;${amount}</h2>
+        <p class="c-pointer h4 py-3"><a onclick="orderCompleted()">Click here to home <i class="fa-solid fa-house"></i></a></p>
         </div>
         <button class="btn btn-warning p-3 mx-2" onclick="orderCompleted()">Order Again</button>
         `;
-
+            //Month Year milSec random getdate
     } else return;
 
 };

@@ -5,73 +5,118 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">  
     <link rel="stylesheet" href="./css/style.css">
-    
+    <script src="https://kit.fontawesome.com/9c00a35248.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+
     <title>Hot Strings - Noodle Shop - checkout</title>
 </head>
 
 <body translate="no" class="dark_theme">
 
-    <header id="home">
-        <nav class="navbar navbar-dark bg-dark fixed-top">
-            <div class="container-fluid">
-                <button class="navbar-toggler active" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <a class="navbar-brand" href="./index.html">Hot Strings - checkout</a>
-                <a href="./cart.html">
-                    <div id="cart" class="cart me-4 d-none">
-                        <i class="bi bi-cart3"></i>
-                        <span id="cartAmount" class="cartAmount d-none"></span>
-                    </div>
-                    </a>
-      
-                <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+         <!-- HEADER SECTION START -->
+         <header id="home">
+            <nav class="bg-color fixed-top">
                 
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark/Light Mode</h5>
-                        <div class="align-content-center align-items-center">
-                            <button class="theme-btn active" aria-label="Change Theme" title="Change Theme" data-theme-btn>
-                                <i id="toggle-icon" class="bi bi-circle"></i>
-                            </button>
+                <div class="container-fluid d-flex align-content-center justify-content-between justify-content-md-between justify-content-lg-between py-1">
+                    
+                    <div class="navbar navbar-dark d-flex mx-s-3 py-1">
+                        <button class="navbar-toggler active" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div>
+                            <div class=" px-2 d-none d-sm-none d-md-block d-lg-block">
+                                <a onclick="orderCompleted()" href="./index.html"><span class="textfx">Hot</span><span id="logo">/Strings&nbsp;<i class="bowl-rice fa-solid fa-bowl-rice"></i></span></a>
+                            </div>
                         </div>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>                   
+                        
+                    </div>
+    
+                    <div class="d-flex align-items-center">
+                        
+                        <div>
+                            <div class="px-2 d-block d-sm-block d-md-none d-lg-none">
+                                <a onclick="orderCompleted()" href="./index.html"><span class="textfx">H</span><span id="logo">/S&nbsp;<i class="bowl-rice fa-solid fa-bowl-rice"></i></span></a>
+                            </div>
+                        </div>
 
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-                            
-                            <li class="nav-item dropdown">
-                                
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-                                
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                    <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-
-                            </li>
-                        </ul>
-
-                        <form class="d-flex mt-3" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-success" type="submit">Search</button>
-                        </form>
-
+                        <div>
+                            <a id="logo" href="./contact.html"><i class=" px-2 fa-solid fa-at"></i></a>
+                        </div>
+                    
+                        <div class="d-none">
+                            <a href="./cart.html">
+                                <div id="cart" class="cart me-2">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span id="cartAmount" class="cartAmount"></span>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
+            </nav>
+
+            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark/Light Mode</h5>
+                    <div class="align-content-center align-items-center">
+                        <button class="theme-btn active" aria-label="Change Theme" title="Change Theme" data-theme-btn>
+                            <i id="toggle-icon" class="fa-regular fa-circle"></i>
+                        </button>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>                   
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item py-2">
+                            <p>
+                                <a class="nav-link active" aria-current="page" href="#">
+                                I'm Michael Angelo Dorio, and welcome to my "Hot Strings!" !
+                                </a>
+                            </p>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Connect with me:</a></li>
+                        <div>
+                            <p class="text-sm-center text-md-center text-center">
+                            <a class="icon-glow btn" target="_blank" href="https://www.facebook.com/muteninjaturtle"><i class="display-3 fab fa-facebook fa-lg"></i></a>
+                            <a class="icon-glow btn" target="_blank" href="https://gitlab.com/michaelangelodorio"><i class="display-3 fab fa-beat-fade fa-gitlab fa-lg"></i></a>
+                            <a class="icon-glow btn" target="_blank" href="https://github.com/m-dorio/"><i class="display-3 fa-brands fa-github fa-bounce fa-lg"></i></a>
+                            <a class="icon-glow btn" target="_blank" href="https://www.linkedin.com/in/michael-angelo-dorio-17510182/"><i class="display-3 fa-brands fa-linkedin-in fa-lg"></i></a> 
+                            </p>     
+                        </div> 
+
+                        <li class="nav-item">
+                            <div class="text-center">
+                                <img class="img-thumbnail w-50" src="./images/qrcode2.png" alt="" srcset="">
+                            </div> 
+                        </li>
+                    
+                        <li class="nav-item dropdown">
+                            
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">My Projects</a>
+                            
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="https://m-dorio.github.io/portfolio_01/" target="_blank" rel="noopener noreferrer">Portfolio #1</a></li>
+                                <li><a class="dropdown-item" href="https://m-dorio.github.io/pubrepo/" target="_blank" rel="noopener noreferrer">Portfolio #2</a></li>
+                                <li><a class="dropdown-item" href="https://m-dorio.github.io/bootstrap-mdorio/" target="_blank" rel="noopener noreferrer">Portfolio #3 - Bootcamp activity</a></li>
+                                <li><a class="dropdown-item" href="https://m-dorio.github.io/dreamshop/" target="_blank" rel="noopener noreferrer">Shopping store - "dreamshop"</a> </li>
+                                <li><a class="dropdown-item" href="https://m-dorio.github.io/pillowshop/" target="_blank" rel="noopener noreferrer">Revised Shopping store - "pillowshop"</a></li>
+                                <li><a class="dropdown-item" href="https://m-dorio.github.io/webportfolio/" target="_blank" rel="noopener noreferrer">A Bootcamp capstone</a></li>
+                                <li><a class="dropdown-item" href="https://m-dorio.github.io/nyorasfarm/" target="_blank" rel="noopener noreferrer">Nyora's Farm</a></li>
+                                <li><a class="dropdown-item" href="https://m-dorio.github.io/figma-output/" target="_blank" rel="noopener noreferrer">Designed in Figma - activity</a></li>
+                                <li>
+                                <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="https://m-dorio.github.io/webportfolio/">Portfolio</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </nav>
-    </header>
+
+        </header>
 
     <section>
         <a href="#home">
@@ -96,11 +141,12 @@
         <div id="label" class="text-center"></div>
     </section>  
 
-    <script src="https://kit.fontawesome.com/6845f956f4.js" crossorigin="anonymous"></script>
+    <section id="footer"></section>
+
         <script type="text/javascript" src="./js/trade.js"></script>
         <script type="text/javascript" src="./js/index.js"></script>
         <script type="text/javascript" src="./js/data.js"></script>
         <script type="text/javascript" src="./js/checkout.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    </body>
+     </body>
 </html>

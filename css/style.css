@@ -33,7 +33,7 @@ a{color: var(--text-color); text-decoration: none;}
     --main-color:#ede6d9;
     --sec-color:#ede6d9;
     --mainR-color:#272727;
-    --sub-color:#272727;
+    --sub-color:#a4a4a4;
     --cl1-color:#ead7b7;
     --cl2-color:#fff8ec;
     --cl3-color:#ffc400;
@@ -41,8 +41,8 @@ a{color: var(--text-color); text-decoration: none;}
     --glow:rgb(255, 128, 0);
     --t-color:#392000;
     --gradient-bg:
-    linear-gradient(127deg, var(--main-color), rgba(0, 0, 0, 0) 40.71%),
-    linear-gradient(217deg, var(--main-color), rgba(0, 0, 0, 0) 40.71%),  
+    linear-gradient(127deg, var(--main-color), rgba(0, 0, 0, 0) 60.71%),
+    linear-gradient(217deg, var(--main-color), rgba(0, 0, 0, 0) 60.71%),  
     url();
     --transition1: 0.30s ease-in-out;
 }
@@ -55,7 +55,7 @@ a{color: var(--text-color); text-decoration: none;}
     --main-color:#272727;
     --sec-color:#181818;
     --mainR-color:#ede6d9;
-    --sub-color:#1d1d1d;
+    --sub-color:#747474;
     --cl1-color:#444444;
     --cl2-color:#313131;
     --cl3-color:#959595;
@@ -63,8 +63,8 @@ a{color: var(--text-color); text-decoration: none;}
     --glow:rgb(255, 115, 0);
     --t-color:#fcbf49;
     --gradient-bg:
-    linear-gradient(127deg, var(--main-color), rgba(0, 0, 0, 0) 40.71%),
-    linear-gradient(217deg, var(--main-color), rgba(0, 0, 0, 0) 40.71%),  
+    linear-gradient(127deg, var(--main-color), rgba(0, 0, 0, 0) 80.71%),
+    linear-gradient(217deg, var(--main-color), rgba(0, 0, 0, 0) 80.71%),  
     url();
     --transition1: 0.30s ease-in-out;
 }
@@ -84,13 +84,34 @@ a{color: var(--text-color); text-decoration: none;}
     opacity: 0.7; 
   }
 
-#logo, #logo .fa-bowl-rice {
+#logo, #logo .bowl-rice{
     color: var(--mode-color);
     text-shadow: 0 0 10px var(--glow);
     font-weight: 600;
     cursor: pointer;
     font-size:  3.2vh;
+    text-transform: uppercase;
 }
+
+#banner{
+    text-transform: uppercase;
+    color: var(--bgm-color);
+    text-shadow: 0 0 10px var(--glow);
+    font-size: 4.2rem;
+    cursor: pointer;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+}
+
+.textfx{
+    text-transform: uppercase;
+    font-size:  3.2vh;
+    color: var(--bgm-color);
+    text-shadow: 0 0 10px var(--glow);
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+}
+
 
 #landing{
     background: var(--gradient-bg), url('../images/landing-ramen.jpg');
@@ -98,7 +119,7 @@ a{color: var(--text-color); text-decoration: none;}
     background-size: cover;
     background-position: center center;
     color: var(--text-color);
-    min-height: 40vh;
+    min-height: 50vh;
     max-width: 100vmax;
 }
 
@@ -125,11 +146,18 @@ a{color: var(--text-color); text-decoration: none;}
     max-width: 100vmax;
 }
 
+#contact-section{
+    padding: 6rem 0rem;
+    background: var(--main-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    max-width: 100vmax;
+}
 
 .header.active .theme-btn { background: var(--main-color); }
 
 .theme-btn {
-    padding: 2px;
+    padding: 1px;
     width: 60px;
     /* background: var(--main-color); */
     border-radius: 50px;
@@ -140,6 +168,7 @@ a{color: var(--text-color); text-decoration: none;}
     /* color: var(--cl2-color); */
     color: transparent !important;
     position: relative;
+    align-items: center;
     left: -15px;
     /* width: 20px;
     height: 20px; */
@@ -147,24 +176,22 @@ a{color: var(--text-color); text-decoration: none;}
     box-shadow: inset 8px -8px var(--cl3-color);
     transition: var(--transition1);
     color: var(--text-color);
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 
 .theme-btn.active #toggle-icon{
     left: 15px;
     border-radius: 50px;
+    align-items: center;
     /* color: var(--cl2-color); */
     color: transparent !important;
     box-shadow: inset 20px 20px var(--cl3-color);
     transition: var(--transition1);
     color: var(--text-color);
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
 }
-/* .ui-id-1{
-
-} */
 
 .ui-widget-content {
     border: 1px solid #dddddd;
@@ -290,25 +317,31 @@ a{color: var(--text-color); text-decoration: none;}
 }
 
 #price{font-size: 2.2vh; color:var(--maiR-color);}
-#old-price{font-size: 2.2vh; text-decoration: line-through; color: var(--p-color);}
+#old-price{font-size: 2.2vh; text-decoration: line-through; color: var(--sub-color);}
 #stats{font-size: 2vh; font-weight: 600; color:var(--s-color);}
 
-.bi-house-fill{
-    font-size: 2.5rem;
+.fa-house{
     font-weight: 300;
     color: var(--mainR-color);
 }
 
-.bi-dash-square{
+.fa-square-minus{
     font-weight: 300;
     color: var(--p-color);
 }
 
-.bi-plus-square{
+.fa-square-plus{
     font-weight: 300;
     color: var(--s-color);
 }
 
+.fa-circle-xmark{
+    color: var(--p-color);
+    font-weight: bold;
+    font-size:  30px;
+    background-color:var(--mainR-color);
+    border-radius:50px;
+}
 
 /* MINI PREVIEW CART */
 
@@ -316,16 +349,7 @@ a{color: var(--text-color); text-decoration: none;}
     display: grid;
     grid-template-columns: repeat(2, 600px);
     gap: 15px;
-    justify-content: center;
-    
-}
-
-.bi-x-circle-fill{
-    color: var(--p-color);
-    font-weight: bold;
-    font-size:  30px;
-    background-color:var(--mainR-color);
-    border-radius:50px;
+    justify-content: center;    
 }
 
 .removeItemButton{

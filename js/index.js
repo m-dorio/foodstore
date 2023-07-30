@@ -66,32 +66,12 @@ window.addEventListener("scroll", function() {
 });
 
 
-// $(function lookUp() {
-//   let availableTags = [
-//   "Ramen",
-//   "Pad Thai",
-//   "Pho",
-//   "Chow Mein",
-//   "Jjajangmyeon",
-//   "Soba",
-//   "Udon",
-//   ];
-//   $("#searchWord").autocomplete({
-//   source: availableTags
-//   });
-//   });
+let thankYou = () => {
+  $('#myModal').modal('show');
 
+  document.getElementById("myButton").onclick = ()=> {
+      location.href = "https://m-dorio.github.io/foodstore/"; 
+  };
+}
 
-  // const f = document.getElementById('form');
-  // const q = document.getElementById('query');
-  // const google = 'https://www.google.com/search?q=site%3A+';
-  // const site = 'https://m-dorio.github.io/foodstore/';
-
-  // function submitted(event) {
-  //   event.preventDefault();
-  //   const url = google + site + '+' + q.value;
-  //   const win = window.open(url, '_blank');
-  //   win.focus();
-  // }
-
-  // f.addEventListener('submit', submitted);
+thankYou();
