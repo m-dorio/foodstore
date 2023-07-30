@@ -83,7 +83,7 @@ a{color: var(--text-color); text-decoration: none;}
     color: #fff;
     opacity: 0.7; 
   }
-  
+
 #logo, #logo .fa-bowl-rice {
     color: var(--mode-color);
     text-shadow: 0 0 10px var(--glow);
@@ -220,7 +220,7 @@ a{color: var(--text-color); text-decoration: none;}
     border-color: var(--textR-color);
 }
 
-.item {
+.xdata {
     background-color:var(--cl2-color);
     border: 1px solid;
     border-radius: 10px;

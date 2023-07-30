@@ -24,11 +24,15 @@ let generateShop = () => {
             }
 
             return `
-                    <div id="product-id-${id}" class="item">
+                    
+                    <div id="xdata" class="xdata">
+                   
+                        <div id="product-id-${id}">
+                            
                             <div class="imgItemContainer"> 
                                 <img class="imgItem" src="${productImg}" alt="">
                             </div>
-                           
+                        
                             <div class="price-quantity">
                                 <div id="price">
                                     <span id="old-price">${oldPrice}</span> <span>${price}</span> <span id="stats">${stats}</span>
@@ -44,13 +48,17 @@ let generateShop = () => {
                                     </span>
                                 </div>
                             </div>
-                            <div class="product-content">       
+                            <div>       
                                 <div class="details">
-                                    <p><h4>${productName}</h4></p>
+                                
+                                <p><h4>${productName}</h4></p>
                                     <p>${description}</p>
                                 </div>
                             </div>
-                    </div>`;
+                            
+                        </div>
+                    </div>   
+                 `;
             }
 
     ).join('\n'));
@@ -58,7 +66,6 @@ let generateShop = () => {
 }
         
 generateShop();
-
 
 
 let checkOut = () => {

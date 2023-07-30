@@ -51,9 +51,14 @@
 
                         <div>
                             <form class="d-flex me-2" role="search" id="form">
-                                <input class="form-control mx-1" onchange="searching()" type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content">
+                                <input lass="form-control mx-1" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search..." aria-label="Search through site content">
                                 <button class="btn btn-success mx-1" type="submit"><i class="bi bi-search"></i></button>
                             </form>
+
+                            <!-- <form class="d-flex me-2" role="search" id="form">
+                                <input class="form-control mx-1" onchange="searching()" type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content">
+                                <button class="btn btn-success mx-1" type="submit"><i class="bi bi-search"></i></button>
+                            </form> -->
                             <!-- <form class="d-flex me-2" role="search">
                                 <input class="form-control mx-1" id="searchWord" type="search" placeholder="Search" aria-label="Search through site content">
                                 <button class="btn btn-success mx-1" type="submit"><i class="bi bi-search"></i></button>
@@ -147,9 +152,13 @@
         </section>  
 
         <section id="shop" class="py-5">
+         
             <div id="shop-items" class="shop pb-5"></div>
             <div class="d-flex justify-content-center py-3">
-                <button class="btn btn-success px-5" onclick="checkOut()">Complete Order</button>
+                <div class="text-light align-content-center">
+                    <h4 id="curr-status"></h4>
+                    <button id="shop-btn" class="btn btn-success px-5" onclick="checkOut()">Complete Order</button>
+                </div>
             </div>  
         </section>
 
