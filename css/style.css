@@ -98,19 +98,19 @@ a{color: var(--text-color); text-decoration: none;}
 
 .textuppercase{ text-transform: uppercase;}
 
-#banner, .banner{
+.banner{
     text-transform: uppercase;
     color: var(--bgm-color);
     text-shadow: 0 0 10px var(--glow);
-    font-size: 4.2rem;
     cursor: pointer;
     font-weight: 900;
+    font-size:  11.2vw;
     font-family: 'Roboto', sans-serif;
 }
 
 .textfx{
     text-transform: uppercase;
-    font-size:  3.2vh;
+    font-size: 3.2vh;
     color: var(--bgm-color);
     text-shadow: 0 0 10px var(--glow);
     font-weight: 900;
