@@ -65,13 +65,3 @@ window.addEventListener("scroll", function() {
   }
 });
 
-
-let thankYou = () => {
-  $('#myModal').modal('show');
-
-  document.getElementById("myButton").onclick = ()=> {
-      location.href = "https://m-dorio.github.io/foodstore/"; 
-  };
-}
-
-thankYou();

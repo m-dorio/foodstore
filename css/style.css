@@ -432,17 +432,20 @@ a{color: var(--text-color); text-decoration: none;}
 #movingButtonUp{
     display:inline-block;
     position: fixed;
-    bottom: 30px;
-    right: 15px;
+    bottom: 65px;
+    right: 25px;
     font-size: 4vh;
+    opacity: 0.4; 
 }
+#movingButtonUp:hover,#movingButtonDown:hover{opacity: 0.9; }
 
 #movingButtonDown{
     display:inline-block;
     position: fixed;
-    bottom: 30px;
-    right: 15px;
+    bottom: 65px;
+    right: 25px;
     font-size: 4vh;
+    opacity: 0.4; 
 }
 
 .movingButtonUp, .movingButtonDown{
