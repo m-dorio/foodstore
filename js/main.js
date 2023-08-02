@@ -30,13 +30,13 @@ let generateShop = () => {
                         <div id="product-id-${id}">
                             
                             <div class="imgItemContainer"> 
+                                <span class="stats">${stats}</span>
                                 <img class="imgItem" src="${productImg}" alt="">
                             </div>
                         
                             <div class="price-quantity">
                                 <div id="price">
                                    <span id="old-price">${oldPrice}</span> <span>${price}</span>
-                                 
                                 </div>
 
                                 <div class="cart-button">
@@ -52,8 +52,12 @@ let generateShop = () => {
                             </div>
                             <div>       
                                 <div class="details">
-                                <p><h4>${productName}</h4></p>
-                                <span id="stats">${stats}</span> ${description}
+                                    <div>
+                                        <h4 class="productname">${productName}</h4>
+                                    </div>
+                                    <div class="desc">
+                                        ${description}
+                                    </div>
                                 </div>
                             </div>
                             

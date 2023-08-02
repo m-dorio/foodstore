@@ -30,7 +30,7 @@ let generateCartItems = () => {
                     </div>
  
                     <div id="price">          
-                        <span id="old-price">${oldPrice}.00</span>/<span>&#8369;${item * price}.00</span> <span id="stats">${stats}</span>
+                        <span id="old-price">${oldPrice}.00</span>/<span>&#8369;${item * price}.00</span> <span class="stats">${stats}</span>
                         <div class="cart-button">
                             <span>
                             <i onclick="removeFromCart(${id})" class="fa-regular fa-square-minus"></i>  
