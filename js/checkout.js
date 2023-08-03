@@ -1,11 +1,14 @@
 
 let cart = JSON.parse(localStorage.getItem("cartData")) || [];
-
+let orderNum = JSON.parse(localStorage.getItem("orderData")) || [];
 let label = document.getElementById("label");
 let shoppingCart = document.getElementById("shopping-cart");
+const ranD = new Date();
+
 
 let calculation =()=> {
     cartAmount.innerHTML = cart.map((allItems) => allItems.item).reduce( (x , y) => x + y, 0 );
+
 }
 
 calculation();
@@ -17,7 +20,9 @@ let generateCartItems = () => {
 
             let {id,item} = x;
             let search = shopItemsData.find((y)=> y.id === id) || []
-            let {productImg, oldPrice, description, price,productName,stats,quantity} = search;
+            let {productImg, oldPrice, description, price, newPrice,productName,stats,quantity} = search;
+            newPrice = item * price;
+      
             return `
 
             <div class="cart-item">
@@ -26,11 +31,12 @@ let generateCartItems = () => {
 
                     <div class="cart-imgItemContainer"> 
                         <img class="imgItemSmall" src="${productImg}" alt="" />
-                        <p class="px-2">${productName} | ${description}</p>
+                        <span id="stats" class="stats-mini twhite">${stats}</span> 
+                        <p class="px-2 twhite">${productName} | ${description}</p>
                     </div>
  
                     <div id="price">          
-                        <span id="stats">${stats}</span> <span id="old-price">${oldPrice}</span>/<span>&#8369;${item * price}</span> x<span id=${id} class="cart-item-price">${item}</span>
+                       <span id="old-price">${oldPrice.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span>/<span class="twhite">&#8369;${newPrice.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span><span id=${id} class="cart-item-price">(x${item})</span>
                     </div>
                 </div>
             </div>
@@ -71,6 +77,7 @@ else {
     generateCartItems();
     updateCart(selectedItem.id);
     localStorage.setItem('cartData', JSON.stringify(cart));
+    localStorage.setItem('orderData', JSON.stringify(orderNum));
 
 };
 
@@ -90,6 +97,7 @@ updateCart(selectedItem.id);
 cart = cart.filter((x)=>x.item !== 0);
 generateCartItems();
 localStorage.setItem('cartData', JSON.stringify(cart));
+localStorage.setItem('orderData', JSON.stringify(orderNum));
 };
 
 let updateCart = (id) => {
@@ -109,6 +117,7 @@ let removeItem = (id) => {
     totalAmount();
     calculation();
     localStorage.setItem('cartData', JSON.stringify(cart));
+    localStorage.setItem('orderData', JSON.stringify(orderNum));
 
 };
 
@@ -118,32 +127,37 @@ let orderCompleted = () => {
    // generateCartItems();
     //calculation();
     localStorage.setItem('cartData', JSON.stringify(cart));
+    localStorage.setItem('orderData', JSON.stringify(orderNum));
     location.replace("./index.html")
 }
 
 let totalAmount = (x) => {
-let raNd = Math.floor((Math.random() * 100) + 1);
-const ranD = new Date();
+
 
     if (cart.length !==0) {
         let amount = cart.map((x) => {
             let {item, id} = x;
+
             let search = shopItemsData.find((y)=> y.id === id) || [];
             return item * search.price;
         }).reduce((x,y)=> x + y, 0); // total amount
+        orderCount = cart.map((allItems) => allItems.item).reduce( (x , y) => x + y, 0 );
+
         label.innerHTML = `   
        
-        <div class="d-flex justify-content-center align-content-center">
-            <div>
-                <p><span class="textuppercase h5 my-5">Order Reference ID:</span> ${ranD.getHours()}${raNd}-${ranD.getFullYear()}-${ranD.getMilliseconds()}-${raNd}-${ranD.getDate()}</p>
-                <p><span class="textuppercase h5">Date Ordered:</span> ${ranD.toDateString()}, ${ranD.toLocaleTimeString()}</p>
-                <h2 class="textuppercase h5 darker-text py-1"> Total amount: &#8369;${amount}.00</h2>
-                
-            </div>
+        <div class="d-flex justify-content-center px-3 align-content-center">
+            <div class="text-center">
+                <p class="display-5 text-center mt-2">Order Received!</p>
+                <p><span class="textuppercase h6 my-5">Order #: ${orderNum}</span></p>
+                <p><span class="textuppercase h6">DATE:</span> ${ranD.toDateString()}, ${ranD.toLocaleTimeString()}</p>
+                <img class="img-thumbnail" width="300" src="./images/qrcode2.png" alt="" srcset="">
+                <p class="py-2">Please scan to pay your order here.</p>
+                <h2 class="textuppercase h6 darker-text"> Total of (${orderCount}) Item(s): &#8369;${amount.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</h2>
+            </div> 
         </div>
         
         <div class="text-center">
-            <p class="display-2 mt-2">Order Received!</p>
+            <p class="display-2">Thank you!</p>
             <button class="btn btn-warning p-3 mx-2" onclick="orderCompleted()">Order Again</button>
             <p class="c-pointer h4 pt-5"><a onclick="orderCompleted()">Click here to home <i class="fa-solid fa-house"></i></a></p>
         <div>
@@ -151,8 +165,9 @@ const ranD = new Date();
         
         `;
             //Month Year milSec random getdate
+      
     } else return;
-
+    console.log("order number: ", orderNum);
 };
 
 totalAmount();

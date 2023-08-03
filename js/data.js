@@ -1,3 +1,5 @@
+let referenceID = 1;
+
 let shopItemsData = [
     {
         id: "AB001",
@@ -72,8 +74,8 @@ let shopItemsData = [
     {
         id: "ABC01",
         productName: "Pancit Canton (Manila)",
-        oldPrice: 221.00,
-        price: 121.00,
+        oldPrice: 151.50,
+        price: 151.50,
         stats: "",
         quantity: 0,
         description: "Stir-fried egg noodles with various vegetables, shrimp, pork, and chicken. It's a common dish during birthdays and celebrations, symbolizing long life and good luck.",
