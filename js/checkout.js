@@ -26,17 +26,18 @@ let generateCartItems = () => {
             if (price < oldPrice){
              
                 stats="On Sale!";
-                oldPrice = `&#8369;${oldPrice.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`; price = `&#8369;${price.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;}
+                oldPrice = `&#8369;${oldPrice.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`; price = `&#8369;${price.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+                newPrice= `&#8369;${newPrice.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;}
             // price increase
             else if (price > oldPrice ){
                 stats="Price &#8593;";
-                oldPrice = `&#8369;${oldPrice.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`; price = `&#8369;${price.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;}
+                oldPrice = `&#8369;${oldPrice.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`; price = `&#8369;${price.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+                newPrice= `&#8369;${newPrice.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;}
             else{
-                {
-                    oldPrice = "",
-                    stats = "",
-                    price = `&#8369;${price.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
-                }
+                {   stats = "";
+                    oldPrice = `&#8369;${oldPrice.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;price = `&#8369;${price.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+                    newPrice= `&#8369;${newPrice.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;}
+                
             }
 
             return `
@@ -52,8 +53,11 @@ let generateCartItems = () => {
                     </div>
  
                     <div id="price">          
-                       <span id="old-price">${oldPrice}</span><span id=${id} class="cart-item-price">(x${item})</span>
+                        <span id="old-price">${oldPrice}</span>/${price}<span id=${id} class="cart-item-price">(x${item})</span>
+                        <span>Total:</span>&nbsp;<span class="torange">${newPrice}</span> 
+
                     </div>
+                    
                 </div>
             </div>
       `              
