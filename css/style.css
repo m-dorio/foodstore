@@ -337,12 +337,8 @@ a{color: var(--text-color); text-decoration: none;}
 #old-price{font-size: 2.2vh; text-decoration: line-through; color: var(--sub-color);}
 .desc{font-size: 1.6vh; text-decoration: none; color: var(--textS-color)}
 .productname{font-size: 2.2vh; text-decoration: none; font-weight: 600; text-align: center;}
-.stats{position: absolute; top: 10px; left: 10px; padding: 0px 5px; font-size: 2vh; font-weight: 600; background-color: var(--p-color); color:var(--textS-color); border-color: var(--textS-color);
-    border-width: 1px;
-    border-style:dashed;}
-.stats-mini{position: absolute; top: -10px; left:-10px;padding: 0px 5px; font-size: 2vh; font-weight: 600; background-color: var(--p-color); color:var(--textS-color); border-color: var(--textS-color);
-    border-width: 1px;
-    border-style:dashed;}
+.stats{position: absolute; top: 10px; left: 10px; padding: 2px 5px; font-size: 2vh; font-weight: 600; background-color: var(--p-color); color:var(--textS-color);}
+.stats-mini{position: absolute; top: -2px; left:-2px;padding: 2px 5px; font-size: 2vh; font-weight: 600; background-color: var(--p-color); color:var(--textS-color);}
 
 .fa-house{
     font-weight: 300;

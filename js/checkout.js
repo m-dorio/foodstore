@@ -22,7 +22,23 @@ let generateCartItems = () => {
             let search = shopItemsData.find((y)=> y.id === id) || []
             let {productImg, oldPrice, description, price, newPrice,productName,stats,quantity} = search;
             newPrice = item * price;
-      
+            // on sale
+            if (price < oldPrice){
+             
+                stats="On Sale!";
+                oldPrice = `&#8369;${oldPrice.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`; price = `&#8369;${price.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;}
+            // price increase
+            else if (price > oldPrice ){
+                stats="Price &#8593;";
+                oldPrice = `&#8369;${oldPrice.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`; price = `&#8369;${price.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;}
+            else{
+                {
+                    oldPrice = "",
+                    stats = "",
+                    price = `&#8369;${price.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+                }
+            }
+
             return `
 
             <div class="cart-item">
@@ -36,7 +52,7 @@ let generateCartItems = () => {
                     </div>
  
                     <div id="price">          
-                       <span id="old-price">${oldPrice.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span>/<span class="twhite">&#8369;${newPrice.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span><span id=${id} class="cart-item-price">(x${item})</span>
+                       <span id="old-price">${oldPrice}</span><span id=${id} class="cart-item-price">(x${item})</span>
                     </div>
                 </div>
             </div>

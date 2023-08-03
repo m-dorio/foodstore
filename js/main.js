@@ -15,19 +15,25 @@ let generateShop = () => {
 
             let {id, productName, oldPrice, price, stats, quantity, description, productImg} = x;
             let search = cart.find((x)=> x.id === id) || []
-            // refId.innerHTML =`Order Number: ${num}`;
             orderNum = num;
+
             // on sale
-            if (price < oldPrice ){
-                
+            if (price < oldPrice){
+             
+                stats="On Sale!";
                 oldPrice = `&#8369;${oldPrice.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`; price = `&#8369;${price.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;}
-            // increase
+            // price increase
             else if (price > oldPrice ){
+                stats="Price &#8593;";
                 oldPrice = `&#8369;${oldPrice.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`; price = `&#8369;${price.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;}
             else{
-                {oldPrice = "", price = `&#8369;${price.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`, stats="";}
+                {
+                    oldPrice = "",
+                    stats = "",
+                    price = `&#8369;${price.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+                }
             }
-     
+
             return `
             
                     <div id="xdata" class="xdata">
@@ -36,8 +42,9 @@ let generateShop = () => {
                             
                             <div class="imgItemContainer"> 
                                 <img class="imgItem" src="${productImg}" alt="">
-                                <span class="stats">${stats}</span>
-                              
+                                <div id="stats" class="stats">
+                                    <span>${stats}</span>
+                                </div> 
                             </div>
                         
                             <div class="price-quantity">

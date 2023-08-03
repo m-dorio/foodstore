@@ -6,7 +6,7 @@ let shopItemsData = [
         productName: "Ramen (Japan)",
         oldPrice: 180.00,
         price: 220.00,
-        stats: "Price Up!",
+        stats: "",
         quantity: 0,
         description: "Ramen is a Japanese noodle soup dish with Chinese origins. It typically consists of wheat noodles served in a flavorful broth, topped with various ingredients like sliced pork, soft-boiled egg, seaweed, and green onions.",
         productImg:"./images/img-1.jpg"
@@ -26,7 +26,7 @@ let shopItemsData = [
         productName: "Pho (Vietnam)",
         oldPrice: 207.00,
         price: 217.00,
-        stats: "Price Up!",
+        stats: "",
         quantity: 0,
         description: "Pho is a Vietnamese noodle soup made with rice noodles and usually served with beef or chicken. The broth is rich and aromatic, flavored with herbs and spices like cinnamon, star anise, and ginger.",
         productImg:"./images/img-3.jpg"
@@ -36,7 +36,7 @@ let shopItemsData = [
         productName: "Chow Mein (China)",
         oldPrice: 220.00,
         price: 127.00,
-        stats: "On Sale!",
+        stats: "",
         quantity: 0,
         description: "Chow Mein is a Chinese stir-fried noodle dish that can be found in various regional variations. The noodles are typically stir-fried with vegetables, meat, and a savory sauce.",
         productImg:"./images/img-4.jpg"
@@ -66,7 +66,7 @@ let shopItemsData = [
         productName: "Soba (Japan)",
         oldPrice: 152.00,
         price: 182.00,
-        stats: "Price Up!",
+        stats: "",
         quantity: 0,
         description: "Soba is a type of Japanese noodle made from buckwheat flour. It can be served cold with dipping sauce (zaru soba) or in a hot broth (kake soba).",
         productImg:"./images/img-7.jpg"
@@ -104,8 +104,8 @@ let shopItemsData = [
     {
         id: "ABC04",
         productName: "Pancit Bihon (Manila)",
-        oldPrice: 221.00,
-        price: 121.00,
+        oldPrice: 121.00,
+        price: 151.00,
         stats: "",
         quantity: 0,
         description: "A simple stir-fried noodle dish made with thin rice noodles, vegetables, and often mixed with chicken and/or pork.",
@@ -114,9 +114,9 @@ let shopItemsData = [
     {
         id: "ABC05",
         productName: "Pancit Miki/Pancit Lomi (Manila)",
-        oldPrice: 221.00,
-        price: 121.00,
-        stats: "On Sale!",
+        oldPrice: 121.00,
+        price: 125.00,
+        stats: "",
         quantity: 0,
         description: "These are noodle soups made with fresh egg noodles, various meats, and vegetables, usually served hot and flavorful.",
         productImg:"./images/img-C05.jpg"
@@ -124,8 +124,8 @@ let shopItemsData = [
     {
         id: "ABC06",
         productName: "Pancit Habhab (Manila)",
-        oldPrice: 221.00,
-        price: 121.00,
+        oldPrice: 155.00,
+        price: 155.00,
         stats: "",
         quantity: 0,
         description: "Originating from Lucban, Quezon, this dish uses dried banana leaves as a 'plate' for the noodles, which are eaten without utensils.",
@@ -134,7 +134,7 @@ let shopItemsData = [
     {
         id: "ABC07",
         productName: "Bulalo Mami (Manila)",
-        oldPrice: 221.00,
+        oldPrice: 151.00,
         price: 121.00,
         stats: "",
         quantity: 0,
@@ -144,9 +144,9 @@ let shopItemsData = [
     {
         id: "ABC08",
         productName: "Sotanghon Guisado (Manila)",
-        oldPrice: 221.00,
-        price: 121.00,
-        stats: "On Sale!",
+        oldPrice: 131.00,
+        price: 131.00,
+        stats: "",
         quantity: 0,
         description: "Stir-fried cellophane noodles with vegetables, chicken, shrimp, and sometimes pork.",
         productImg:"./images/img-C08.jpg"
@@ -154,7 +154,7 @@ let shopItemsData = [
     {
         id: "ABC09",
         productName: "Mami (Manila)",
-        oldPrice: 221.00,
+        oldPrice: 241.00,
         price: 121.00,
         stats: "",
         quantity: 0,
