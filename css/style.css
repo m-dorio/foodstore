@@ -258,13 +258,6 @@ a{color: var(--text-color); text-decoration: none;}
     border-color: var(--mainR-color);
 }
 
-/* .product-content h4{
-    text-align: center;
-    font-size: 2.5vh;
-    color: var(--t-color);
-    font-weight:600;
-} */
-
 .details {
     display: flex;
     flex-direction: column;
@@ -276,7 +269,7 @@ a{color: var(--text-color); text-decoration: none;}
 .icon-glow{
     margin: 3px !important;
     padding: 5px 5px;
-    color: var(--modeR-color);
+    color: var(--mode-color);
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 14px;
@@ -326,9 +319,10 @@ a{color: var(--text-color); text-decoration: none;}
     flex-direction: row;
     justify-content: space-between;
 }
-
+.c-gold {color: var(--mode-color);}
 .btm-separator{border: 1px; border-color: var(--cl1-color); border-bottom-style: dashed;}
 
+.tblackwhite{color:var(--mainR-color);font-weight: 600;}
 .twhite{color:var(--textS-color)}
 .torange{color:var(--s-color)}
 .tred{color:var(--s-color)}

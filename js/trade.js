@@ -8,7 +8,7 @@ let myFunction = () => {
     containerx = shop.getElementsByClassName('xdata');
     labelx = document.getElementById("curr-status");
     shopbtn = document.getElementById("shop-btn");
-  
+    
     // Loop through all list items, and hide those who don't match the search query
     for (i = 0; i < items.length; i++) {
         a = items[i].getElementsByTagName("h4")[0];
@@ -27,6 +27,8 @@ let myFunction = () => {
             shopbtn.style.display = "block";
         }
     }
+
+   
 }
 myFunction();
 

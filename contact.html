@@ -44,8 +44,7 @@
                         <div class="d-block">
                             <a href="./index.html">
                                 <div class="me-2 display-6">
-                                    <i class="fa-solid fa-house"></i>
-                                    <i class="fa-solid fa-clipboard-list"></i>
+                                    <i class="text-white fa-solid fa-clipboard-list"></i>
                                 </div>
                                 </a>
                         </div>
@@ -63,111 +62,65 @@
                     </div>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>                   
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item py-2">
-                            <p>
-                                <a class="nav-link active" aria-current="page" href="#">
-                                I'm Michael Angelo Dorio, and welcome to my "Hot Strings!" !
-                                </a>
-                            </p>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="#">Connect with me:</a></li>
-                        <div>
-                            <p class="text-sm-center text-md-center text-center">
-                            <a class="icon-glow btn" target="_blank" href="https://www.facebook.com/muteninjaturtle"><i class="display-3 fab fa-facebook fa-lg"></i></a>
-                            <a class="icon-glow btn" target="_blank" href="https://gitlab.com/michaelangelodorio"><i class="display-3 fab fa-beat-fade fa-gitlab fa-lg"></i></a>
-                            <a class="icon-glow btn" target="_blank" href="https://github.com/m-dorio/"><i class="display-3 fa-brands fa-github fa-bounce fa-lg"></i></a>
-                            <a class="icon-glow btn" target="_blank" href="https://www.linkedin.com/in/michael-angelo-dorio-17510182/"><i class="display-3 fa-brands fa-linkedin-in fa-lg"></i></a> 
-                            </p>     
-                        </div> 
-                        <li class="nav-item">
-                            <div class="text-center">
-                                <img class="img-thumbnail w-50" src="./images/qrcode2.png" alt="" srcset="">
-                            </div> 
-                        </li>
-                        <li class="nav-item dropdown">
-                            
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">My Projects</a>
-                            
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="https://m-dorio.github.io/portfolio_01/" target="_blank" rel="noopener noreferrer">Portfolio #1</a></li>
-                                <li><a class="dropdown-item" href="https://m-dorio.github.io/pubrepo/" target="_blank" rel="noopener noreferrer">Portfolio #2</a></li>
-                                <li><a class="dropdown-item" href="https://m-dorio.github.io/bootstrap-mdorio/" target="_blank" rel="noopener noreferrer">Portfolio #3 - Bootcamp activity</a></li>
-                                <li><a class="dropdown-item" href="https://m-dorio.github.io/dreamshop/" target="_blank" rel="noopener noreferrer">Shopping store - "dreamshop"</a> </li>
-                                <li><a class="dropdown-item" href="https://m-dorio.github.io/pillowshop/" target="_blank" rel="noopener noreferrer">Revised Shopping store - "pillowshop"</a></li>
-                                <li><a class="dropdown-item" href="https://m-dorio.github.io/webportfolio/" target="_blank" rel="noopener noreferrer">A Bootcamp capstone</a></li>
-                                <li><a class="dropdown-item" href="https://m-dorio.github.io/nyorasfarm/" target="_blank" rel="noopener noreferrer">Nyora's Farm</a></li>
-                                <li><a class="dropdown-item" href="https://m-dorio.github.io/figma-output/" target="_blank" rel="noopener noreferrer">Designed in Figma - activity</a></li>
-                                <li>
-                                <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="https://m-dorio.github.io/webportfolio/">Portfolio</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                <div id="slide-panel" class="offcanvas-body"></div>
             </div>
-
         </header>
 
     <section id="contact-section">
         <div class="vh-750">
             <div class="container">
                 <div class="row d-flex justify-content-center align-items-center">
-                    <div data-aos="slide-down" data-aos-duration="1000">
-             
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-10 col-lg-6 col-xl-6 col-xxl-6 order-sm-1">        
-                               
-                        <div class="m-2 p-3 border border-secondary">
-                            <form id="form-col" action="https://formsubmit.co/670d3901f0cce250278dea3ca5f66b47" method="POST">
-                                <div class="form-group text-black font-weight-bold mt-2">                 
-                            
-                                    <div class="form-group text-white font-weight-bold">
-                                        <p class="c-gold xlfont-min">You can Email me here:</p>
-                                        <label>Full Name:</label>
-                                        <input class="form-control" type="text" name="fullname" placeholder="Please enter your full name" required>
-                                    </div>
 
-                                    <div class="form-group text-white font-weight-bold py-3">
-                                        <label>Email address:</label>
-                                        <input class="form-control" type="email" name="email" placeholder="Email address" required>
-                                    </div>
+                    <div class="col-12 col-sm-12 col-md-10 col-lg-6 col-xl-6 col-xxl-6 order-sm-1">        
+              
+                            <div class="m-2 p-3 bg-color border border-secondary rounded-2">
+                                <form id="form-col" action="https://formsubmit.co/670d3901f0cce250278dea3ca5f66b47" method="POST">
+                                    <div class="twhite form-group font-weight-bold mt-2">                 
                                 
-                                    <div class="form-group text-white font-weight-bold py-3">
-                                        <label>Contact Number: &nbsp;</label><span class="text-white">&nbsp;[optional]</span>
-                                        <input type="number" class="form-control" id="contactNumber" placeholder="Mobile/Tel number">
-                                    </div>
-                                    <div class="form-group text-white font-weight-bold py-3">
-                                        <input class="form-control"  type="hidden" name="_subject" value="You have a new email!">
-                                        <input class="form-control" type="hidden" name="_template" value="table">
-                                        <input class="form-control"  type="hidden" name="_next" value="https://m-dorio.github.io/foodstore/thankyou.html">
+                                        <div class="form-group font-weight-bold">
+                                            <p class="h4 c-gold xlfont-min">You can Email me here:</p>
+                                            <label>Full Name:</label>
+                                            <input class="form-control" type="text" name="fullname" placeholder="Please enter your full name" required>
+                                        </div>
+
+                                        <div class="form-group font-weight-bold py-3">
+                                            <label>Email address:</label>
+                                            <input class="form-control" type="email" name="email" placeholder="Email address" required>
+                                        </div>
                                     
-                                        <label>Message:</label>
-                                        <textarea class="form-control" name="message" id="message" rows="3" placeholder="Write your message here" required></textarea>
+                                        <div class="form-group font-weight-bold py-3">
+                                            <label>Contact Number: &nbsp;</label><span class="">&nbsp;[optional]</span>
+                                            <input type="number" class="form-control" id="contactNumber" placeholder="Mobile/Tel number">
+                                        </div>
+                                        <div class="form-group tfont-weight-bold py-3">
+                                            <input class="form-control"  type="hidden" name="_subject" value="You have a new email!">
+                                            <input class="form-control" type="hidden" name="_template" value="table">
+                                            <input class="form-control"  type="hidden" name="_next" value="https://m-dorio.github.io/foodstore/thankyou.html">
+                                        
+                                            <label>Message:</label>
+                                            <textarea class="form-control" name="message" id="message" rows="3" placeholder="Write your message here" required></textarea>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="pt-3">
-                                <button class="btn btn-success mb-3 font-weight-bold" type="submit">Send</button>
-                                <button type="reset" class="btn btn-danger mb-3 font-weight-bold">Reset Form</button>
-                                </div>
-                            </form>
-                        </div>
+                                    <div class="pt-3">
+                                    <button class="btn btn-success mb-3 font-weight-bold" type="submit">Send</button>
+                                    <button type="reset" class="btn btn-danger mb-3 font-weight-bold">Reset Form</button>
+                                    </div>
+                                </form>
+                            </div>
                         
                     </div>
-                    
-                        <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 col-xxl-6 py-4">
-                        
+
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 col-xxl-6 p-4">
+                        <div class=" bg-color border border-secondary rounded-2">
                             <div class="h4 text-white text-center contact-icons-sm d-block d-sm-block d-md-none d-lg-none d-xl-none d-xxl-none order-sm-0">
-                                <p class="c-joker-blue xlfont-min">Connect:</p>
+                                <p class="xlfont-min">Connect:</p>
                                 <p class="text-sm-center text-md-center text-center">
                                     <a class="icon-glow btn" target="_blank" href="https://www.facebook.com/muteninjaturtle"><i class="display-3 fab fa-facebook fa-lg"></i></a>
                                     <a class="icon-glow btn" target="_blank" href="https://gitlab.com/michaelangelodorio"><i class="display-3 fab fa-beat-fade fa-gitlab fa-lg"></i></a>
                                     <a class="icon-glow btn" target="_blank" href="https://github.com/m-dorio/"><i class="display-3 fa-brands fa-github fa-bounce fa-lg"></i></a>
                                     <a class="icon-glow btn" target="_blank" href="https://www.linkedin.com/in/michael-angelo-dorio-17510182/"><i class="display-3 fa-brands fa-linkedin-in fa-lg"></i></a> 
                                 </p>  
-                                <p class="c-dblue  xlfont-xxsmid text-center pt-5">Let's work together!</p>
+                                <p class="c-gold xlfont-xxsmid text-center">Let's work together!</p>
                                 <div>
                                     <img class="img-thumbnail w-50" src="./images/female.png" alt="" srcset=""><img class="img-thumbnail w-50" src="./images/male.png" alt="" srcset="">
                                 </div> 
@@ -177,9 +130,9 @@
                                 <div>
                                     <img class="img-thumbnail w-50" src="./images/female.png" alt="" srcset=""><img class="img-thumbnail w-50" src="./images/male.png" alt="" srcset="">
                                 </div> 
-                                <p class="c-dblue  xlfont-xxsmid text-center pt-5">Let's work together!</p>
-                                <p class="c-joker-blue xlfont-min">Connect:</p>
-                            <p class="text-sm-center text-md-center text-center">
+                                <p class="c-gold xlfont-xxsmid text-center pt-5">Let's work together!</p>
+                                <p class="c-gold xlfont-min">Connect:</p>
+                            <p class="text-sm-center text-md-center text-center pb-4">
                                 <a class="icon-glow btn" target="_blank" href="https://www.facebook.com/muteninjaturtle"><i class="display-3 fab fa-facebook fa-lg"></i></a>
                                 <a class="icon-glow btn" target="_blank" href="https://gitlab.com/michaelangelodorio"><i class="display-3 fab fa-beat-fade fa-gitlab fa-lg"></i></a>
                                 <a class="icon-glow btn" target="_blank" href="https://github.com/m-dorio/"><i class="display-3 fa-brands fa-github fa-bounce fa-lg"></i></a>
@@ -187,18 +140,18 @@
                             </p>  
                             </div>
                         </div>
-                
+                    </div>
                     
                 </div>
             </div>
         </div>
     </section>  
 
-        <script type="text/javascript" src="./js/lastmod.js"></script>
-        <script type="text/javascript" src="./js/trade.js"></script>
-        <script type="text/javascript" src="./js/index.js"></script>
-        <script type="text/javascript" src="./js/data.js"></script>
-        <script type="text/javascript" src="./js/checkout.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    </body>
+    <script type="text/javascript" src="./js/lastmod.js"></script>
+    <script type="text/javascript" src="./js/trade.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/data.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
 </html>
